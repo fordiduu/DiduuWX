@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "VIP";
+}
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    $(function () {
+        wx.config({
+            debug: true,
+            appId: 'wx74a9df37cc009b3f',
+            timestamp: '@ViewBag.S_Second',
+            nonceStr: '@ViewBag.S_noncestr',
+            signature: '@ViewBag.signature',
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ']
+        });
+        wx.ready(function () {
+            wx.onMenuShareTimeline({
+                title: '快来领VIP账号吧',
+                desc:'来嘀嘟免费领取各大网站的VIP吧！',
+                link: 'http://news.diduu.com',
+                imgUrl: 'https://mmbiz.qlogo.cn/mmbiz/EiasUJHdf0InvKN3ozzEib3Ps0qQTkicq7JDyicjibKchVibqcQMhyfQzOtqxCqFYF3tJUQWXneoohvlWBxcq9XJpJ4Q/0',
+                success: function () {
+                    alert('恭喜您，分享成功！');
+                },
+                cancel: function () {
+                    alert('您取消了分享！');
+                }
+            });
+            wx.onMenuShareAppMessage({
+                title: '快来领VIP账号吧',
+                desc: '来嘀嘟免费领取各大网站的VIP吧！',
+                link: 'http://news.diduu.com',
+                imgUrl: 'https://mmbiz.qlogo.cn/mmbiz/EiasUJHdf0InvKN3ozzEib3Ps0qQTkicq7JDyicjibKchVibqcQMhyfQzOtqxCqFYF3tJUQWXneoohvlWBxcq9XJpJ4Q/0',
+                type: '',
+                dataUrl: '',
+                success: function () {
+                    alert('恭喜您，分享成功！');
+                },
+                cancel: function () {
+                    alert('您取消了分享！');
+                }
+            });
+            wx.onMenuShareQQ({
+                title: '快来领VIP账号吧',
+                desc: '来嘀嘟免费领取各大网站的VIP吧！',
+                link: 'http://news.diduu.com',
+                imgUrl: 'https://mmbiz.qlogo.cn/mmbiz/EiasUJHdf0InvKN3ozzEib3Ps0qQTkicq7JDyicjibKchVibqcQMhyfQzOtqxCqFYF3tJUQWXneoohvlWBxcq9XJpJ4Q/0',
+                success: function () {
+                    alert('恭喜您，分享成功！');
+                },
+                cancel: function () {
+                    alert('您取消了分享！');
+                }
+            });
+        });
+    });
+</script>
+<h2>@ViewBag.JsApiTicket</h2>

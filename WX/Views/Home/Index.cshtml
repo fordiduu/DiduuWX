@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<center> <br /><br /><br />   
+    <img id="valiCode" style="cursor: pointer;" src="@Url.RouteUrl("CodeImage")" onclick="this.src=this.src+'?'" alt="字符验证码" /><br /><br /><br />
+    <img id="valiCode2" style="cursor: pointer;" src="@Url.RouteUrl("NumImage")" onclick="this.src=this.src+'?'" alt="数字验证码" />
+</center>

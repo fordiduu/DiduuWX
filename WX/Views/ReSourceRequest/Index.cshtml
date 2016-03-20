@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "资源帮帮_嘀嘟科技";
+}
+<script src="~/Content/Scripts/ResourceRequest.js"></script>
+<div class="containter">
+    @*<div id="div_welcome" class="text-big text-center padding bg-blue text-white clear">
+        <b>欢迎使用“资源帮帮”</b>
+    </div>*@
+    <div id="div_request" class="line-small margin clear">
+        <div class="xl12 xm10 text-large padding clear">资源需求：<span class="text-big text-gray">（PS:信息详细，才能更准确找到资源）</span></div>
+        <div class="xl12 xm10 margin-top clear">
+            <textarea id="request" class="input text-big" style="resize: none; " rows="4" placeholder="您找不到或无法下载的资源，类型不限，但违法的事情不能做哦！"></textarea>
+        </div>
+    </div>
+    <div id="div_contact" class="line-small margin clear">
+        <div class="xl12 xm10 text-large padding clear">联系方式：<span class="text-big text-gray">（PS:为保护个人隐私，建议留下邮箱）</span></div>
+        <div class="xl12 xm10 margin-top clear">
+            <input type="text" id="contact" class="input text-big" placeholder="电话、邮箱、QQ、微信、微博" />
+        </div>
+    </div>
+    <div id="div_code" class="text-big text-center margin padding-top padding-bottom clear">
+        <span style="float:left" class="padding-small-top text-large">
+            右图得到的结果：
+        </span>
+        <div style="float:left">
+            <input type="text" id="code" maxlength="6" class="div_code input text-big" placeholder="验证码" />
+        </div>
+        <div style="float:left">
+            <img src="@Url.RouteUrl("NumImage")" style="cursor: pointer; height:34px;" onclick="this.src=this.src+'?'" alt="数字验证码" />
+        </div>
+    </div>
+    <div id="div_submit" class="margin padding-top clear">
+        <input type="button" id="btn_submit" class="button bg-red input clear text-big" value="提 交 请 求" />
+    </div>
+    <div id="div_introduce" style="margin-bottom:50px;">
+        <div class="margin radius clear">
+            <span class="radius text-big padding line-height22 hvr-rectangle-out bg-white clear">
+                “资源帮帮”是嘀嘟科技（以下简称为嘀嘟）为方便“资源小白”下载资源而推出的一项帮助服务，如果您有找不到或找到之后由于某种原因无法下载的资源（不违法、违规的情况下），
+            可以在这里提交给我们，嘀嘟的各个成员会在收到请求后的第一时间内为您提供帮助，当然，为了让我们的工作人员能及时的帮助到您，希望您可以留下
+            微信、qq、电话等即时通讯方式，当然，我们会保证您留下的任何信息都不会被泄露出去，如果您仍旧担心信息会被泄露，可以留下邮件、微博等非即时
+            通讯方式或者选择不填写联系方式。我们的工作人员会在找到资源后在问题页面以及与您留下的联系方式（如果存在）进行回复，
+            </span>
+        </div>
+    </div>
+    <div id="div_nav" class="text-big text-center div_bottom line clear">
+        <div id="my_request" class="x4 padding">
+            <span>
+                <img src="~/Content/Images/my-272636.png" />
+            </span>
+            我的请求
+        </div>
+        <div id="hot_request" class="x4 padding">
+            <span>
+                <img src="~/Content/Images/hot-272636.png" />
+            </span>
+            请求热榜
+        </div>
+        <div id="fresh_request" class="x4 padding">
+            <span>
+                <img src="~/Content/Images/time-272636.png" />
+            </span>
+            最新发布
+        </div>
+    </div>
+</div>
